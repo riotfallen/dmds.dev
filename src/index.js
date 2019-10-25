@@ -1,3 +1,4 @@
-import { bro } from './js/bro';
+import { registerWorker } from './js/main';
 import './styles/main.scss';
-console.log(bro('Hello'));
+
+registerWorker('service-worker.js');
