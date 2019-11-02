@@ -2,6 +2,7 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const WorkBoxPlugin = require("workbox-webpack-plugin");
 const PWAManifestPlugin = require("webpack-pwa-manifest");
+const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const path = require('path');
 
 module.exports = {
@@ -51,11 +52,11 @@ module.exports = {
             skipWaiting: true
         }),
         new PWAManifestPlugin({
-            name: 'My Applications Friendly Name',
-            short_name: 'Application',
-            description: 'Description!',
-            background_color: '#01579b',
-            theme_color: '#01579b',
+            name: 'Daily Quote',
+            short_name: 'Daily Quote',
+            description: 'Free Daily Quote for You',
+            background_color: '#ffffff',
+            theme_color: '#333333',
             start_url: '/',
             crossorigin: 'anonymous',
             icon: [
@@ -64,6 +65,9 @@ module.exports = {
                     sizes: [96, 128, 192, 256, 384, 512]
                 },
             ]
+        }),
+        new FaviconsWebpackPlugin({
+            logo: path.resolve('src/icon/icon.png')
         })
     ]
 };

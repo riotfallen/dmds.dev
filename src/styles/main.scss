@@ -17,37 +17,63 @@ body {
   background: $bg;
 }
 
-.outer {
+.footer {
+  width: 100%;
+  position: absolute;
+  top: 90%;
+  left: 0;
+  display: table;
+
+  .middle {
+    display: table-cell;
+    horiz-align: center;
+
+    .inner {
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+
+      p {
+        font-weight: 300;
+        font-style: italic;
+      }
+    }
+  }
+}
+
+.content {
   width: 100%;
   height: 100vh;
   top: 0;
   left: 0;
   position: absolute;
   display: table;
-}
 
-.middle {
-  display: table-cell;
-  vertical-align: middle;
-}
+  .middle {
+    display: table-cell;
+    vertical-align: middle;
 
-.inner {
-  width: 80%;
-  margin: 0 auto;
+    .inner {
+      width: 80%;
+      margin: 0 auto;
 
-  .quote {
-    font-size: 3em;
-    font-style: italic;
-    padding-bottom: 20px;
-    border-bottom: 1px solid black;
+      .quote {
+        font-size: 3em;
+        font-style: italic;
+        padding-bottom: 20px;
+        border-bottom: 1px solid black;
+      }
+
+      .author {
+        margin-top: 20px;
+        font-size: 2em;
+        text-align: right;
+      }
+    }
   }
-
-  .author {
-    margin-top: 20px;
-    font-size: 2em;
-    text-align: right;
-  }
 }
+
+
 
 .quote::before, .quote::after {
   content: ' " ';
@@ -60,12 +86,12 @@ body {
   content: "- ";
 }
 
-/* CSS LOADER */
 
+/* CSS LOADER */
 .lds-heart {
   display: inline-block;
   position: relative;
-  margin: 0 auto;
+  left: 50%;
   width: 64px;
   height: 64px;
   transform: rotate(45deg);
