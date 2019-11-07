@@ -57,7 +57,7 @@ module.exports = {
             description: 'Free Daily Quote for You',
             background_color: '#ffffff',
             theme_color: '#333333',
-            start_url: '/',
+            start_url: '/index.html',
             crossorigin: 'anonymous',
             icon: [
                 {
